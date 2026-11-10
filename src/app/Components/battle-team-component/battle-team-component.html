@@ -1,0 +1,56 @@
+
+<h1>Generador de equipos Pokémon</h1>
+
+<h2>Equipo 1</h2>
+
+<button (click)="equipoUno()">
+  Generar equipo 1
+</button>
+
+<div *ngIf="cargando1">
+  Cargando equipo 1...
+</div>
+
+<div class="equipo">
+  <div class="pokemon" *ngFor="let pokemon of equipo1">
+
+    <img [src]="pokemon.sprites.front_default">
+
+    <h3>{{ pokemon.name | titlecase }}</h3>
+
+    <p>N.º {{ pokemon.id }}</p>
+
+    <span *ngFor="let tipo of pokemon.types">
+      {{ tipo.type.name }}
+    </span>
+
+  </div>
+</div>
+
+<hr>
+
+<h2>Equipo 2</h2>
+
+<button (click)="equipoDos()">
+  Generar equipo 2
+</button>
+
+<div *ngIf="cargando2">
+  Cargando equipo 2...
+</div>
+
+<div class="equipo">
+  <div class="pokemon" *ngFor="let pokemon of equipo2">
+
+    <img [src]="pokemon.sprites.front_default">
+
+    <h3>{{ pokemon.name | titlecase }}</h3>
+
+    <p>N.º {{ pokemon.id }}</p>
+
+    <span *ngFor="let tipo of pokemon.types">
+      {{ tipo.type.name }}
+    </span>
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<a class="battle" [routerLink]="['/battle']">Button</a>
+<a class="battle" [routerLink]="['/types']">Button</a>
+
+
+<div class="region-selector">
+  <label for="region">Región:</label>
+  <select #regionSelect id="region" (change)="onRegionChange(regionSelect.value)">
+    <option value="">-- Elige una región --</option>
+    @for (r of regions; track r.pokedex) {
+      <option [value]="r.pokedex">{{ r.label }}</option>
+    }
+  </select>
+</div>
+@if (loading()) {
+  <p>Cargando...</p>
+}
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+<div class="grid">
+  @for (p of pokemons(); track p.id) {
+    <a class="item" [routerLink]="['/pokemon', p.name]">
+      <span class="number">#{{ p.id }}</span>
+      <img [src]="p.image" [alt]="p.name" width="96" loading="lazy" />
+      <p class="name">{{ p.name }}</p>
+    </a>
+  }
+</div>

@@ -1,0 +1,67 @@
+@if (pokemon(); as p) {
+  <div class="card-container">
+    <div class="card">
+      <div class="card-front">
+        <span class="pokemon-id">#{{ p.id }}</span>
+
+        <img [src]="p.image" [alt]="p.name" width="200" />
+
+        <h2 class="name">{{ p.name }}</h2>
+
+        <div class="types">
+          @for (t of p.types; track t) {
+            <span class="type" [ngClass]="t.toLowerCase()">
+              {{ t }}
+            </span>
+          }
+        </div>
+
+        <div class="pokemon-info">
+          <div>
+            <span>Altura</span>
+            <strong>{{ p.height }} m</strong>
+          </div>
+
+          <div>
+            <span>Peso</span>
+            <strong>{{ p.weight }} kg</strong>
+          </div>
+        </div>
+
+        <!-- <h3>Habilidades</h3>
+
+        <div class="abilities">
+          @for (ability of p.abilities; track ability) {
+            <span>{{ ability }}</span>
+          }
+        </div> -->
+      </div>
+
+      <div class="card-back">
+        <h2 class="name">Estadísticas</h2>
+
+        <img [src]="p.image" [alt]="p.name" width="100" />
+
+        <div class="stats">
+          @for (s of p.stats; track s.name) {
+            <div class="stat">
+              <div class="stat-info">
+                <span>{{ s.name }}</span>
+                <strong>{{ s.value }}</strong>
+              </div>
+
+              <div class="progress-bar">
+                <div
+                  class="progress"
+                  [style.width.%]="(s.value / 255) * 100"
+                  [ngClass]="p.types[0].toLowerCase()"
+                ></div>
+              </div>
+            </div>
+          }
+        </div>
+
+      </div>
+    </div>
+  </div>
+}

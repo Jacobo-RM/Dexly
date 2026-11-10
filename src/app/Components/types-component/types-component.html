@@ -1,0 +1,49 @@
+
+<section class="types-container">
+
+  <h2>Tipos Pokémon</h2>
+
+  <!-- Lista de tipos -->
+  <div class="types-list">
+    @for (type of types; track type.typeNum) {
+      <button
+        type="button"
+        (click)="onTypeChange(type.typeNum)"
+        class="type-button"
+      >
+        {{ type.label }}
+      </button>
+    }
+  </div>
+
+  <!-- Loading -->
+  @if (loading()) {
+    <p class="loading">Cargando Pokémon...</p>
+  }
+
+  <!-- Error -->
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  <!-- Lista de Pokémon -->
+  @if (!loading() && pokemons().length > 0) {
+    <div class="pokemon-list">
+      @for (pokemon of pokemons(); track pokemon.id) {
+        <article class="pokemon-card">
+
+          <img
+            [src]="pokemon.image"
+            [alt]="pokemon.name"
+          />
+
+          <h3>{{ pokemon.name | titlecase }}</h3>
+
+          <p>#{{ pokemon.id }}</p>
+
+        </article>
+      }
+    </div>
+  }
+
+</section>

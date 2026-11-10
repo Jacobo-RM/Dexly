@@ -1,0 +1,228 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+.card-container {
+  margin: 30px auto;
+  perspective: 1000px;
+  width: 30%;
+  height: 90vh;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #f5f5f5, white);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+  text-align: center;
+}
+
+.pokemon-id {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-weight: bold;
+  color: #999;
+  font-size: 18px;
+}
+
+.card-front img {
+  display: block;
+  margin: 35px auto 15px;
+  border-radius: 50%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.name {
+  font-family: 'Pokemon Solid', sans-serif;
+  text-transform: uppercase; 
+  font-size: 22px; 
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+.types {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.pokemon-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pokemon-info span {
+  color: #888;
+  font-size: 13px;
+}
+
+.abilities {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.abilities span {
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 15px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.flip-message {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+
+.type {
+  text-transform: capitalize;
+  padding: 4px 15px;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin: 3px;
+}
+
+.normal { background: #a8a878; }
+.fire { background: #f08030; }
+.water { background: #6890f0; }
+.grass { background: #78c850; }
+.electric { background: #f8d030; color: #333; }
+.ice { background: #98d8d8; color: #333; }
+.fighting { background: #c03028; }
+.poison { background: #a040a0; }
+.ground { background: #e0c068; color: #333; }
+.flying { background: #a890f0; }
+.psychic { background: #f85888; }
+.bug { background: #a8b820; }
+.rock { background: #b8a038; }
+.ghost { background: #705898; }
+.dragon { background: #7038f8; }
+.dark { background: #705848; }
+.steel { background: #b8b8d0; color: #333; }
+.fairy { background: #ee99ac; }
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-back img {
+  display: block;
+  margin: 5px auto 20px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.stat-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.progress-bar {
+  height: 9px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+.total-stats {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+.progress.fire { background: #f08030; }
+.progress.water { background: #6890f0; }
+.progress.grass { background: #78c850; }
+.progress.electric { background: #f8d030; }
+.progress.ice { background: #98d8d8; }
+.progress.psychic { background: #f85888; }
+.progress.normal { background: #a8a878; }
+.progress.fighting { background: #c03028; }
+.progress.poison { background: #a040a0; }
+.progress.ground { background: #e0c068; }
+.progress.flying { background: #a890f0; }
+.progress.bug { background: #a8b820; }
+.progress.rock { background: #b8a038; }
+.progress.ghost { background: #705898; }
+.progress.dragon { background: #7038f8; }
+.progress.dark { background: #705848; }
+.progress.steel { background: #b8b8d0; }
+.progress.fairy { background: #ee99ac; }
+
+@media (max-width: 480px) {
+  .card-container {
+    height: 570px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
