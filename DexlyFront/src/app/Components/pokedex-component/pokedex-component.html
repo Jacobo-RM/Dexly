@@ -1,0 +1,78 @@
+<section class="pokedex-panel">
+  <div class="panel-lights">
+    <span class="light blue"></span>
+    <span class="light red"></span>
+    <span class="light yellow"></span>
+    <span class="light green"></span>
+  </div>
+
+  <div class="filters">
+    <input
+      class="filter-name"
+      type="search"
+      placeholder="BUSCAR NOMBRE O Nº..."
+      [value]="search()"
+      (input)="search.set($any($event.target).value)"
+    />
+
+    <select [value]="generation() ?? ''" (change)="onGenerationChange($any($event.target).value)">
+      <option value="">Todas las generaciones</option>
+      @for (g of generations(); track g) {
+        <option [value]="g">Generación {{ g }}</option>
+      }
+    </select>
+
+    <select [value]="sortBy()" (change)="onSortChange($any($event.target).value)">
+      <option value="id">Ordenar por nº</option>
+      <option value="name">Ordenar por nombre</option>
+      <option value="total">Ordenar por stats</option>
+    </select>
+
+    <label class="toggle">
+      <input
+        type="checkbox"
+        [checked]="onlyLegendary()"
+        (change)="onlyLegendary.set($any($event.target).checked)"
+      />
+      <span class="switch"></span>
+      <span>★ Legendarios</span>
+    </label>
+
+    @if (hasActiveFilters()) {
+      <button type="button" class="reset-btn" (click)="resetFilters()">Limpiar</button>
+    }
+  </div>
+
+  <div class="type-chips">
+    @for (t of allTypes(); track t) {
+      <button
+        type="button"
+        class="chip"
+        [attr.data-type]="t"
+        [class.active]="selectedTypes().includes(t)"
+        (click)="toggleType(t)"
+      >
+        {{ t }}
+      </button>
+    }
+  </div>
+</section>
+<!-- 
+<p class="count">{{ filtered().length }} resultados</p>
+
+<section class="grid">
+  @for (p of filtered(); track p.id) {
+    <a class="card" [routerLink]="['/pokemon', p.id]">
+      <img [src]="p.sprites.front" [alt]="p.name" loading="lazy" />
+      <span class="number">#{{ p.id.toString().padStart(3, '0') }}</span>
+      <h3>{{ p.name }}</h3>
+      <div class="types">
+        @for (t of p.types; track t) {
+          <span class="chip small" [attr.data-type]="t">{{ t }}</span>
+        }
+      </div>
+    </a>
+  } @empty {
+    <p>No hay ningún Pokémon con esos filtros.</p>
+  }
+</section> -->

@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1, "name": "Bulbasaur", "generation": 1, "types": ["grass", "poison"],
+    "heightM": 0.7, "weightKg": 6.9, "isLegendary": false,
+    "stats": { "hp": 45, "attack": 49, "defense": 49, "specialAttack": 65, "specialDefense": 65, "speed": 45 },
+    "abilities": [ { "name": "Overgrow", "isHidden": false }, { "name": "Chlorophyll", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [ { "pokemonId": 2, "trigger": "level-up", "minLevel": 16, "item": null } ],
+    "description": "Lleva una semilla en el lomo desde que nace. Crece a la vez que el Pokémon al absorber la luz del sol.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" }
+  },
+  {
+    "id": 2, "name": "Ivysaur", "generation": 1, "types": ["grass", "poison"],
+    "heightM": 1.0, "weightKg": 13.0, "isLegendary": false,
+    "stats": { "hp": 60, "attack": 62, "defense": 63, "specialAttack": 80, "specialDefense": 80, "speed": 60 },
+    "abilities": [ { "name": "Overgrow", "isHidden": false }, { "name": "Chlorophyll", "isHidden": true } ],
+    "evolvesFrom": 1,
+    "evolvesTo": [ { "pokemonId": 3, "trigger": "level-up", "minLevel": 32, "item": null } ],
+    "description": "El bulbo de su espalda se hincha y le cuesta mantenerse sobre las patas. Cuando florece, desprende un aroma dulce.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" }
+  },
+  {
+    "id": 3, "name": "Venusaur", "generation": 1, "types": ["grass", "poison"],
+    "heightM": 2.0, "weightKg": 100.0, "isLegendary": false,
+    "stats": { "hp": 80, "attack": 82, "defense": 83, "specialAttack": 100, "specialDefense": 100, "speed": 80 },
+    "abilities": [ { "name": "Overgrow", "isHidden": false }, { "name": "Chlorophyll", "isHidden": true } ],
+    "evolvesFrom": 2,
+    "evolvesTo": [],
+    "description": "La enorme flor de su espalda absorbe energía solar. Con días soleados se vuelve más vigoroso y colorido.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" }
+  },
+  {
+    "id": 4, "name": "Charmander", "generation": 1, "types": ["fire"],
+    "heightM": 0.6, "weightKg": 8.5, "isLegendary": false,
+    "stats": { "hp": 39, "attack": 52, "defense": 43, "specialAttack": 60, "specialDefense": 50, "speed": 65 },
+    "abilities": [ { "name": "Blaze", "isHidden": false }, { "name": "Solar Power", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [ { "pokemonId": 5, "trigger": "level-up", "minLevel": 16, "item": null } ],
+    "description": "La llama de su cola indica su salud y su ánimo. Si se apaga, el Pokémon corre un grave peligro.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" }
+  },
+  {
+    "id": 5, "name": "Charmeleon", "generation": 1, "types": ["fire"],
+    "heightM": 1.1, "weightKg": 19.0, "isLegendary": false,
+    "stats": { "hp": 58, "attack": 64, "defense": 58, "specialAttack": 80, "specialDefense": 65, "speed": 80 },
+    "abilities": [ { "name": "Blaze", "isHidden": false }, { "name": "Solar Power", "isHidden": true } ],
+    "evolvesFrom": 4,
+    "evolvesTo": [ { "pokemonId": 6, "trigger": "level-up", "minLevel": 36, "item": null } ],
+    "description": "De carácter agresivo, ataca sin pensarlo a cualquier rival. Su cola ardiente se vuelve más intensa en combate.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" }
+  },
+  {
+    "id": 6, "name": "Charizard", "generation": 1, "types": ["fire", "flying"],
+    "heightM": 1.7, "weightKg": 90.5, "isLegendary": false,
+    "stats": { "hp": 78, "attack": 84, "defense": 78, "specialAttack": 109, "specialDefense": 85, "speed": 100 },
+    "abilities": [ { "name": "Blaze", "isHidden": false }, { "name": "Solar Power", "isHidden": true } ],
+    "evolvesFrom": 5,
+    "evolvesTo": [],
+    "description": "Surca los cielos en busca de rivales fuertes. Su aliento de fuego puede fundir casi cualquier cosa.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" }
+  },
+  {
+    "id": 7, "name": "Squirtle", "generation": 1, "types": ["water"],
+    "heightM": 0.5, "weightKg": 9.0, "isLegendary": false,
+    "stats": { "hp": 44, "attack": 48, "defense": 65, "specialAttack": 50, "specialDefense": 64, "speed": 43 },
+    "abilities": [ { "name": "Torrent", "isHidden": false }, { "name": "Rain Dish", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [ { "pokemonId": 8, "trigger": "level-up", "minLevel": 16, "item": null } ],
+    "description": "Cuando se siente amenazado, se esconde en su caparazón y dispara agua a presión por la boca.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" }
+  },
+  {
+    "id": 8, "name": "Wartortle", "generation": 1, "types": ["water"],
+    "heightM": 1.0, "weightKg": 22.5, "isLegendary": false,
+    "stats": { "hp": 59, "attack": 63, "defense": 80, "specialAttack": 65, "specialDefense": 80, "speed": 58 },
+    "abilities": [ { "name": "Torrent", "isHidden": false }, { "name": "Rain Dish", "isHidden": true } ],
+    "evolvesFrom": 7,
+    "evolvesTo": [ { "pokemonId": 9, "trigger": "level-up", "minLevel": 36, "item": null } ],
+    "description": "Su cola peluda y sus orejas le ayudan a nadar con equilibrio. Se dice que vive muchísimos años.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" }
+  },
+  {
+    "id": 9, "name": "Blastoise", "generation": 1, "types": ["water"],
+    "heightM": 1.6, "weightKg": 85.5, "isLegendary": false,
+    "stats": { "hp": 79, "attack": 83, "defense": 100, "specialAttack": 85, "specialDefense": 105, "speed": 78 },
+    "abilities": [ { "name": "Torrent", "isHidden": false }, { "name": "Rain Dish", "isHidden": true } ],
+    "evolvesFrom": 8,
+    "evolvesTo": [],
+    "description": "Los cañones de su caparazón lanzan chorros de agua capaces de perforar acero a gran distancia.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png" }
+  },
+  {
+    "id": 25, "name": "Pikachu", "generation": 1, "types": ["electric"],
+    "heightM": 0.4, "weightKg": 6.0, "isLegendary": false,
+    "stats": { "hp": 35, "attack": 55, "defense": 40, "specialAttack": 50, "specialDefense": 50, "speed": 90 },
+    "abilities": [ { "name": "Static", "isHidden": false }, { "name": "Lightning Rod", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [ { "pokemonId": 26, "trigger": "item", "minLevel": null, "item": "Thunder Stone" } ],
+    "description": "Almacena electricidad en las bolsas de sus mejillas y la descarga cuando se siente en peligro.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" }
+  },
+  {
+    "id": 26, "name": "Raichu", "generation": 1, "types": ["electric"],
+    "heightM": 0.8, "weightKg": 30.0, "isLegendary": false,
+    "stats": { "hp": 60, "attack": 90, "defense": 55, "specialAttack": 90, "specialDefense": 80, "speed": 110 },
+    "abilities": [ { "name": "Static", "isHidden": false }, { "name": "Lightning Rod", "isHidden": true } ],
+    "evolvesFrom": 25,
+    "evolvesTo": [],
+    "description": "Su cola actúa como toma de tierra para evitar electrocutarse a sí mismo. Puede liberar descargas enormes.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png" }
+  },
+  {
+    "id": 133, "name": "Eevee", "generation": 1, "types": ["normal"],
+    "heightM": 0.3, "weightKg": 6.5, "isLegendary": false,
+    "stats": { "hp": 55, "attack": 55, "defense": 50, "specialAttack": 45, "specialDefense": 65, "speed": 55 },
+    "abilities": [ { "name": "Run Away", "isHidden": false }, { "name": "Adaptability", "isHidden": false }, { "name": "Anticipation", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      { "pokemonId": 134, "trigger": "item", "minLevel": null, "item": "Water Stone" },
+      { "pokemonId": 135, "trigger": "item", "minLevel": null, "item": "Thunder Stone" },
+      { "pokemonId": 136, "trigger": "item", "minLevel": null, "item": "Fire Stone" }
+    ],
+    "description": "Su genética inestable le permite adaptarse a casi cualquier entorno evolucionando de formas muy distintas.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" }
+  },
+  {
+    "id": 134, "name": "Vaporeon", "generation": 1, "types": ["water"],
+    "heightM": 1.0, "weightKg": 29.0, "isLegendary": false,
+    "stats": { "hp": 130, "attack": 65, "defense": 60, "specialAttack": 110, "specialDefense": 95, "speed": 65 },
+    "abilities": [ { "name": "Water Absorb", "isHidden": false }, { "name": "Hydration", "isHidden": true } ],
+    "evolvesFrom": 133,
+    "evolvesTo": [],
+    "description": "Su cuerpo casi se funde con el agua. Vive junto a ríos y lagos limpios donde se camufla con facilidad.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png" }
+  },
+  {
+    "id": 135, "name": "Jolteon", "generation": 1, "types": ["electric"],
+    "heightM": 0.8, "weightKg": 24.5, "isLegendary": false,
+    "stats": { "hp": 65, "attack": 65, "defense": 60, "specialAttack": 110, "specialDefense": 95, "speed": 130 },
+    "abilities": [ { "name": "Volt Absorb", "isHidden": false }, { "name": "Quick Feet", "isHidden": true } ],
+    "evolvesFrom": 133,
+    "evolvesTo": [],
+    "description": "Acumula electricidad estática en su pelaje, que se eriza como agujas cuando se enfada.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png" }
+  },
+  {
+    "id": 136, "name": "Flareon", "generation": 1, "types": ["fire"],
+    "heightM": 0.9, "weightKg": 25.0, "isLegendary": false,
+    "stats": { "hp": 65, "attack": 130, "defense": 60, "specialAttack": 95, "specialDefense": 110, "speed": 65 },
+    "abilities": [ { "name": "Flash Fire", "isHidden": false }, { "name": "Guts", "isHidden": true } ],
+    "evolvesFrom": 133,
+    "evolvesTo": [],
+    "description": "Guarda fuego en su interior y su temperatura corporal es muy alta. Exhala llamas de hasta 1.700 °C.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png" }
+  },
+  {
+    "id": 143, "name": "Snorlax", "generation": 1, "types": ["normal"],
+    "heightM": 2.1, "weightKg": 460.0, "isLegendary": false,
+    "stats": { "hp": 160, "attack": 110, "defense": 65, "specialAttack": 65, "specialDefense": 110, "speed": 30 },
+    "abilities": [ { "name": "Immunity", "isHidden": false }, { "name": "Thick Fat", "isHidden": false }, { "name": "Gluttony", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [],
+    "description": "Come cantidades enormes y se duerme enseguida. Pasa la mayor parte del día durmiendo, incluso tras comer.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" }
+  },
+  {
+    "id": 150, "name": "Mewtwo", "generation": 1, "types": ["psychic"],
+    "heightM": 2.0, "weightKg": 122.0, "isLegendary": true,
+    "stats": { "hp": 106, "attack": 110, "defense": 90, "specialAttack": 154, "specialDefense": 90, "speed": 130 },
+    "abilities": [ { "name": "Pressure", "isHidden": false }, { "name": "Unnerve", "isHidden": true } ],
+    "evolvesFrom": null,
+    "evolvesTo": [],
+    "description": "Creado mediante ingeniería genética a partir del ADN de Mew. Posee un poder psíquico enorme y un corazón feroz.",
+    "sprites": { "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png", "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" }
+  }
+]

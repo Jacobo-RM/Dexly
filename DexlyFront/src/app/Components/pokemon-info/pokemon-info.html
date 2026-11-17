@@ -1,0 +1,8 @@
+@if (loading()) {
+  <p>Cargando...</p>
+} @else if (error()) {
+  <p>No se encontró el Pokémon.</p>
+  <a routerLink="/">Volver a la Pokédex</a>
+} @else if (pokemon(); as p) {
+  <h1>#{{ p.id }} {{ p.name }}</h1>
+}

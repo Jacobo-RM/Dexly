@@ -1,0 +1,6 @@
+@DexlyBack_HostAddress = http://localhost:5289
+
+GET {{DexlyBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
